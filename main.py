@@ -90,12 +90,11 @@ params["no_shortcut"] = "1"
 
 # Build command string. 
 # Any parameter with a truthy value will be added to command string. 
-for k, v in params.items():
-    if v: 
-        if k in binary_params:
-            param_str += f" -{k}"
-        else:
-            param_str += f" -{k} {v}"
+for k, v in params.items(): 
+    if v and k in binary_params:
+        param_str += f" -{k}"
+    if v and k not in binary_params:
+        param_str += f" -{k} {v}"
     
 
 # Print command string. 
