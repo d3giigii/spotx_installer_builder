@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk
 
 # https://github.com/SpotX-Official/SpotX/discussions/60
 
@@ -99,6 +100,46 @@ languages = {
     "zh": "Chinese",
 }
 
+param_descriptions ={
+    # Install options. 
+    "version": "",
+    "confirm_spoti_recomended_over": "",
+    "confirm_spoti_recomended_unistall": "",
+    "confirm_uninstall_ms_spoti": "",
+    
+    # Experimental features. 
+    "exp_spotify": "",
+    "enhance_like_off": "",
+    "enhance_playlist_off": "",
+    "smartShuffle_off": "",
+    "hide_col_icon_off": "",
+    "new_theme": "",
+    "rightsidebar_off": "",
+    "rightsidebarcolor": "",
+    "old_lyrics": "",
+    "lyrics_stat": "",
+    "adsections_off": "",
+    "funnyprogressBar": "",
+    
+    # Language. 
+    "language": "",
+    
+    # Podcasts on homepage. 
+    "podcasts_off": "",
+    "podcasts_on": "",
+    
+    # Automatic updates. 
+    "block_update_on": "",
+    "block_update_off": "",
+    
+    # Other. 
+    "cache_limit": "",
+    "premium": "",
+    "urlform_goofy": "",
+    "start_spoti": "",
+    "no_shortcut": ""
+}
+
 ### Tk
 ## Tk setup. 
 window = tk.Tk()
@@ -113,42 +154,42 @@ language_choice.set("English")
 install_header_lbl = tk.Label(text="Install", font=("Arial", 16))
 version_lbl = tk.Label(text="Version")
 version_ent = tk.Entry(textvariable=version_to_gen, width=20)
-csro_ckb = tk.Checkbutton(text="confirm_spoti_recomended_over")
-csru_ckb = tk.Checkbutton(text="confirm_spoti_recomended_uninstall")
-cums_ckb = tk.Checkbutton(text="confirm_uninstall_ms_spoti")
+csro_ckb = ttk.Checkbutton(text="confirm_spoti_recomended_over")
+csru_ckb = ttk.Checkbutton(text="confirm_spoti_recomended_uninstall")
+cums_ckb = ttk.Checkbutton(text="confirm_uninstall_ms_spoti")
 # Experimental section. 
 experimental_header_lbl = tk.Label(text="Experimental", font=("Arial",16))
-exp_spotify_ckb = tk.Checkbutton(text="exp_spotify")
-enhance_like_off_ckb = tk.Checkbutton(text="enhance_like_off")
-enhance_playlist_off_ckb = tk.Checkbutton(text="enhance_playlist_off")
-smartShuffle_off_ckb = tk.Checkbutton(text="smartShuffle_off")
-hide_col_icon_off_ckb = tk.Checkbutton(text="hide_col_icon_off")
-new_theme_ckb = tk.Checkbutton(text="new_theme")
-rightsidebar_off_ckb = tk.Checkbutton(text="rightsidebar_off")
-rightsidebarcolor_ckb = tk.Checkbutton(text="rightsidebarcolor")
-old_lyrics_ckb = tk.Checkbutton(text="old_lyrics")
-lyrics_stat_ckb = tk.Checkbutton(text="lyrics_stat")
-adsections_off_ckb = tk.Checkbutton(text="adsections_off")
-funnyprogressBar_ckb = tk.Checkbutton(text="funnyprogressBar")
+exp_spotify_ckb = ttk.Checkbutton(text="exp_spotify")
+enhance_like_off_ckb = ttk.Checkbutton(text="enhance_like_off")
+enhance_playlist_off_ckb = ttk.Checkbutton(text="enhance_playlist_off")
+smartShuffle_off_ckb = ttk.Checkbutton(text="smartShuffle_off")
+hide_col_icon_off_ckb = ttk.Checkbutton(text="hide_col_icon_off")
+new_theme_ckb = ttk.Checkbutton(text="new_theme")
+rightsidebar_off_ckb = ttk.Checkbutton(text="rightsidebar_off")
+rightsidebarcolor_ckb = ttk.Checkbutton(text="rightsidebarcolor")
+old_lyrics_ckb = ttk.Checkbutton(text="old_lyrics")
+lyrics_stat_ckb = ttk.Checkbutton(text="lyrics_stat")
+adsections_off_ckb = ttk.Checkbutton(text="adsections_off")
+funnyprogressBar_ckb = ttk.Checkbutton(text="funnyprogressBar")
 # Language section. 
 language_header_lbl = tk.Label(text="Language", font=("Arial", 16))
 language_lbl = tk.Label(text="Language")
 language_opm = tk.OptionMenu(window, language_choice, *[str(i) for i in languages.values()])
 # Podcast section. 
 podcast_header_lbl = tk.Label(text="Podcast", font=("Arial",16))
-podcasts_off_ckb = tk.Checkbutton(text="podcasts_off")
-podcasts_on_ckb = tk.Checkbutton(text="podcasts_on")
+podcasts_off_ckb = ttk.Checkbutton(text="podcasts_off")
+podcasts_on_ckb = ttk.Checkbutton(text="podcasts_on")
 # Update section. 
 Update_header_lbl = tk.Label(text="Update", font=("Arial",16))
-block_update_on_ckb = tk.Checkbutton(text="block_update_on")
-block_update_off_ckb = tk.Checkbutton(text="block_update_off")
+block_update_on_ckb = ttk.Checkbutton(text="block_update_on")
+block_update_off_ckb = ttk.Checkbutton(text="block_update_off")
 # Other section. 
 other_header_lbl = tk.Label(text="Other", font=("Arial", 25))
-cache_limit_ckb = tk.Checkbutton(text="Cache Limit")
-premium_ckb = tk.Checkbutton(text="premium")
-urlform_goofy_ckb = tk.Checkbutton(text="urlform_goofy")
-start_spoti_ckb = tk.Checkbutton(text="start_spoti")
-no_shortcut_ckb = tk.Checkbutton(text="no_shortcut")
+cache_limit_ckb = ttk.Checkbutton(text="Cache Limit")
+premium_ckb = ttk.Checkbutton(text="premium")
+urlform_goofy_ckb = ttk.Checkbutton(text="urlform_goofy")
+start_spoti_ckb = ttk.Checkbutton(text="start_spoti")
+no_shortcut_ckb = ttk.Checkbutton(text="no_shortcut")
 # Generate section. 
 generate_header_lbl = tk.Label(text="Generate", font=("Arial", 16))
 generate_btn = tk.Button(text="Generate Installer")
@@ -179,8 +220,6 @@ def main():
     csru_ckb.grid(row=rows, column=0, sticky="W")
     rows += 1
     cums_ckb.grid(row=rows, column=0, sticky="W")
-
-    
     
     # Language section. 
     rows += 1
